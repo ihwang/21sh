@@ -6,7 +6,7 @@
 /*   By: ihwang <ihwang@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/20 00:14:04 by ihwang            #+#    #+#             */
-/*   Updated: 2020/05/11 15:31:05 by ihwang           ###   ########.fr       */
+/*   Updated: 2020/08/02 15:30:55 by tango            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void				restore_term(t_l *l)
 
 	if (l->line == NULL)
 		add_key("\n", l);
-//	while ((l->y * l->co) + l->x - l->pmpt != l->nb)
-//		ctrl_down(l);
 	end_key(l);
 	apply_termcap_str("do", 0, 0);
 	old = get_set_default_term(NULL);
